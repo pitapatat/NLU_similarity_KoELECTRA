@@ -33,14 +33,14 @@
 
 ### 4. 하이퍼파라미터 튜닝
 
-  |hyperparameters|base |best| reason|
-  |:-:|:-:|:-:|-|
-  |learning_rate|5e-5|5e-5|learning rate을 증가시키면 train loss가 줄어들지 않음
-  |epochs|10|20| epoch 2배 조정시 성능이 크게 향상되었으나 그 이상은 투입 자원 대비 성능향상이 미미함
-  |warmup_proportion|0.0|0.2|0.1씩 증가시킨 결과 0.2에서 가장 높은 성능향상
-  |weight_decay|0.0|0.0|epoch 증가에 따라 weight decay를 함께 늘리면 성능이 향상되었으나 best는 아님
-  |batch_size|32|32|batch size 증가시 out of memory 에러가 발생함
-  |max_seq_len|120|120|학습데이터의 문장 평균 값을 고려하여 80으로 조정하였으나 성능이 하락함
+|hyperparameters|base |best| reason|
+|:-:|:-:|:-:|-|
+|learning_rate|5e-5|5e-5|learning rate을 증가시키면 train loss가 줄어들지 않음
+|epochs|10|20| epoch 2배 조정시 성능이 크게 향상되었으나 그 이상은 투입 자원 대비 성능향상이 미미함
+|warmup_proportion|0.0|0.2|0.1씩 증가시킨 결과 0.2에서 가장 높은 성능향상
+|weight_decay|0.0|0.0|epoch 증가에 따라 weight decay를 함께 늘리면 성능이 향상되었으나 best는 아님
+|batch_size|32|32|batch size 증가시 out of memory 에러가 발생함
+|max_seq_len|120|120|학습데이터의 문장 평균 값을 고려하여 80으로 조정하였으나 성능이 하락함
 
 
 
