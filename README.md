@@ -30,6 +30,7 @@
     |base-v3|256|1.5M|2e-4|512|
 
 
+
 ### 4. 하이퍼파라미터 튜닝
 
   |hyperparameters|base |best| reason|
@@ -40,6 +41,8 @@
   |weight_decay|0.0|0.0|epoch 증가에 따라 weight decay를 함께 늘리면 성능이 향상되었으나 best는 아님
   |batch_size|32|32|batch size 증가시 out of memory 에러가 발생함
   |max_seq_len|120|120|학습데이터의 문장 평균 값을 고려하여 80으로 조정하였으나 성능이 하락함
+
+
 
 
 ### 5. 학습 결과
@@ -56,15 +59,21 @@
 |pearson correlation|&nbsp;&nbsp; | 0.93091781336|
 
 
+
+
 ### 6. [FAST API](https://github.com/seyeonjungGit/team1_API) 구현
 
 <center><img width = '600' height = '400' src = 'https://user-images.githubusercontent.com/83687942/163333897-11740a11-5a0d-49b5-8504-d95452b7a3d0.jpg'></center>
+
+
 
 ### 7. 과제 담당 역할
 ```
 - 모델 조사 및 논문 리서치(SBERT)
 - 하이퍼파라미터 튜닝 
 ```
+
+
 
 ### 8. 한계점 및 보완점
 ```
