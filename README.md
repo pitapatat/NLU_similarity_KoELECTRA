@@ -33,7 +33,7 @@
 
 ### 4. 하이퍼파라미터 튜닝
 
-|hyperparameters|base |best| reason|
+|hyperparameters|&nbsp;base&nbsp; |&nbsp;best&nbsp;| reason|
 |:-:|:-:|:-:|-|
 |learning_rate|5e-5|5e-5|learning rate을 증가시키면 train loss가 줄어들지 않음
 |epochs|10|20| epoch 2배 조정시 성능이 크게 향상되었으나 그 이상은 투입 자원 대비 성능향상이 미미함
