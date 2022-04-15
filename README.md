@@ -12,7 +12,7 @@
 ### 2. [데이터셋](https://github.com/KLUE-benchmark/KLUE) 
 ```
 - KLUE-STS(Airbnb-리뷰/policy-뉴스/parakQC-스마트홈 쿼리)
-- 데이터 전처리/분리 : 결측치 확인 , 중복 제거 후 train: validation = 9:1 로 나누어 학습  
+- 데이터 전처리/분리 : 결측치 확인 , 중복 제거 후 train: validation = 9:1 로 나누어 학습 
 ```
 
 ### 3. 모델 학습
@@ -51,7 +51,7 @@
 <center><img width = '400'  height = '300' src ='https://user-images.githubusercontent.com/83687942/163331659-0f273aa6-fd48-4986-8733-8bbc785b1cde.jpg'></center>
 
 * validation loss 기준 (loss 증가 직전) epochs=2는 훈련량 부족으로 높은 성능을 보이지 않음
-* eopchs=16과 19의 성능 비교 결과 check point = "epochs:19" 
+* eopchs=16과 19의 f1 score 비교 결과 check point는 "epochs:19" 설정
 
 |- | base model | best hyperparameter tuned model|
 |:-:|:-:|:-:|
@@ -77,7 +77,9 @@
 
 ### 8. 한계점 및 보완점
 ```
-- 하이퍼파라미터 튜닝의 자동화 
+- 하이퍼파라미터 튜닝의 자동화 필요
 - 추후 토큰화 방식의 다양화(형태소 임베딩 등)를 통한 모델의 성능 비교 
+```
+```
 - (개인) 오픈소스를 활용한 논문의 코드 구현 및 모듈화를 위한 역량 개발 필요
 ```
