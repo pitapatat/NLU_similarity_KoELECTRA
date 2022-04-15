@@ -17,7 +17,7 @@
 
 ### 3. 모델 학습
 * 목표: pre-trained model을 사용하여 모델 훈련 후, 하이퍼파라미터 튜닝을 통해 성능 향상
-* ELECTRA model
+* **ELECTRA model**
    <center><img width = '700' height = '150' src ='https://user-images.githubusercontent.com/83687942/163327105-67d133c7-395b-4919-9d76-36fa17b1b9b7.jpg'></center>
   
   * Masked Language Model을 개선시킨 RTD(Replaced Token Detection)방식으로 학습하는 모델
