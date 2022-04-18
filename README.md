@@ -16,22 +16,25 @@
 ```
 
 ### 3. 모델 학습
-* 목표: pre-trained model을 사용하여 모델 훈련 후, 하이퍼파라미터 튜닝을 통해 성능 향상
+```
+- 목표: pre-trained model을 사용하여 모델 훈련 후 하이퍼파라미터 튜닝을 통해 성능 향상
+```
 * **ELECTRA model**
    <center><img width = '700' height = '150' src ='https://user-images.githubusercontent.com/83687942/163327105-67d133c7-395b-4919-9d76-36fa17b1b9b7.jpg'></center>
   
   * Masked Language Model을 개선시킨 RTD(Replaced Token Detection)방식으로 학습하는 모델
   * RTD : masking된 단어를 generator를 통해 다른 단어로 대체한 후 discriminator로 원본과 대조하여 학습하는 방식
   
-* 학습모델 : [KoELECTRA](https://github.com/monologg/KoELECTRA/tree/master/finetune)
+* 학습모델(base model) : [KoELECTRA](https://github.com/monologg/KoELECTRA/tree/master/finetune)
    
     |model|batch_size | train_steps| learning_rate | max_seq_len|
     |-|-|-|-|-|
     |base-v3|256|1.5M|2e-4|512|
 
-
+</br>
 
 ### 4. 하이퍼파라미터 튜닝
+* epochs, warmup_proportion 튜닝 
 
 |hyperparameters|&nbsp;base&nbsp; |&nbsp;best&nbsp;| reason|
 |:-:|:-:|:-:|-|
@@ -43,23 +46,22 @@
 |max_seq_len|120|120|학습데이터의 문장 평균 값을 고려하여 80으로 조정하였으나 성능이 하락함
 
 
-
+</br>
 
 ### 5. 학습 결과
 
-<center><img width = '400' height = '300' src = 'https://user-images.githubusercontent.com/83687942/163331560-62bbf38a-e58a-4a1f-8339-14938750726a.jpg'></center>
-<center><img width = '400'  height = '300' src ='https://user-images.githubusercontent.com/83687942/163331659-0f273aa6-fd48-4986-8733-8bbc785b1cde.jpg'></center>
-
-* validation loss 기준 (loss 증가 직전) epochs=2는 훈련량 부족으로 높은 성능을 보이지 않음
-* eopchs=16과 19의 f1 score 비교 결과 check point는 "epochs:19" 설정
+* 하이퍼파라미터 튜닝 후 f1 score 약 0.014 향상
 
 |- | base model | best hyperparameter tuned model|
 |:-:|:-:|:-:|
 |&nbsp;&nbsp;&nbsp;&nbsp;f1 score&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;0.8641035996&nbsp;&nbsp;&nbsp;&nbsp;|**0.87802585193**|
 |pearson correlation|&nbsp;&nbsp; | 0.93091781336|
 
+[참고] 
+<center><img width = '400' height = '300' src = 'https://user-images.githubusercontent.com/83687942/163331560-62bbf38a-e58a-4a1f-8339-14938750726a.jpg'></center>
+<center><img width = '400'  height = '300' src ='https://user-images.githubusercontent.com/83687942/163331659-0f273aa6-fd48-4986-8733-8bbc785b1cde.jpg'></center>
 
-
+</br>
 
 ### 6. [FAST API](https://github.com/seyeonjungGit/team1_API) 구현
 
