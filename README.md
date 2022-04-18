@@ -55,7 +55,7 @@
 
 |- | base model | best hyperparameter tuned model|
 |:-:|:-:|:-:|
-|&nbsp;&nbsp;&nbsp;&nbsp;f1 score&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;0.8641035996&nbsp;&nbsp;&nbsp;&nbsp;&nbsp|**0.87802585193**|
+|&nbsp;&nbsp;&nbsp;&nbsp;f1 score&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;0.8641035996&nbsp;&nbsp;&nbsp;&nbsp;|**0.87802585193**|
 |pearson correlation|&nbsp;&nbsp; | 0.93091781336|
 
 
